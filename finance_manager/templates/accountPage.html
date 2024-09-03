@@ -1,0 +1,72 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="d-flex flex-row account-container">
+    <div class="d-grid" id="form-holder">
+        <div class="row">
+            <form action="" method="POST" class="login-container container form-control mt-5 col-10">
+                {{ form.hidden_tag() }}
+                <input type="hidden" name="login-form" value="login-confirm">
+                <h1 class="text-center mt-4 text-decoration-underline">Login Here!</h1>
+                <fieldset class="form-fieldset d-flex flex-column">
+                    <div class="d-flex flex-column mb-5 mt-5 ms-auto me-auto w-75">
+                        {{ form.username.label(class="fs-2 text-center mb-2 fw-bold") }}
+                        {{ form.username(class="user-input fs-4 ms-2 w-50 ms-auto me-auto", placeholder="Enter Username") }}
+                    </div>
+                    <div class="d-flex flex-column mb-5 ms-auto me-auto w-75">
+                        {{ form.password.label(class="fs-2 text-center mb-2 fw-bold") }}
+                        {{ form.password(class="pass-input fs-4 ms-2 w-50 ms-auto me-auto", placeholder="Enter Password") }}
+                    </div>
+                    <div class="ms-auto me-auto mb-5">
+                        {{ form.loginBtn(class="login-button btn fs-4 mb-4") }}
+                    </div>
+                </fieldset>
+            </form>
+            <div class="col-2 mt-auto mb-auto arrow-container">
+                <img src="/static/images/arrow-right.png" alt="Arrow Right" class="w-25 arrow" id="arrow" onclick="slideArrowLeft()">
+            </div>
+        </div>
+    </div>
+    <div class="d-grid" id="create-holder">
+        <div class="row">
+            </form>
+                <div class="col-2 mt-auto mb-auto arrow-container">
+                    <img src="/static/images/arrow-right.png" alt="Arrow Right" class="w-25 arrow-left" id="arrow" onclick="slideArrowRight()">
+                </div>
+            </form>
+            <form action="" method="POST" class="create-container container form-control mt-5 col-10 mb-4">
+                <input type="hidden" name="create-form" value="create-confirm">
+                {{ form.hidden_tag() }}
+                <h1 class="text-center mt-4 text-decoration-underline">Create Account Here!</h1>
+                <fieldset class="form-fieldset d-flex flex-column">
+                    <div class="d-flex flex-column mb-5 mt-5 ms-auto me-auto w-75">
+                        {{ createForm.createUsername.label(class="fs-2 text-center mb-2 fw-bold") }}
+                        {{ createForm.createUsername(class="user-input fs-4 ms-2 w-50 ms-auto me-auto", placeholder="Enter Username") }}
+                    </div>
+                    <div class="d-flex flex-column mb-5 ms-auto me-auto w-75 password-require">
+                        {{ createForm.createPassword.label(class="fs-2 text-center mb-2 fw-bold") }}
+                        {{ createForm.createPassword(class="pass-input fs-4 ms-2 w-50 ms-auto me-auto", placeholder="Enter Password") }}
+                        <p class="requirements">Requirements</p>
+                        <div class="requirements-holder">
+                            <ul>
+                                <li>
+                                    8 or More Characters
+                                </li>
+                                <li>
+                                    3 or More Numbers
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column mb-5 ms-auto me-auto w-75">
+                        {{ createForm.confirmPassword.label(class="fs-2 text-center mb-2 fw-bold") }}
+                        {{ createForm.confirmPassword(class="pass-input fs-4 ms-2 w-50 ms-auto me-auto", placeholder="Confirm Password") }}
+                    </div>
+                    <div class="ms-auto me-auto mb-5">
+                        {{ createForm.createBtn(class="create-button btn fs-4 mb-4") }}
+                    </div>
+                </fieldset>
+        </div>
+    </div>
+</div>
+{% endblock %}

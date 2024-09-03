@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+
+{% block content %}
+<main>
+    <p class="home-title fs-1 text-center mt-5 mb-5">
+        This is <b>YOUR</b> Personal Finance Manager
+    </p>
+
+    <div class="welcome-holder container d-grid mt-5 rounded-3 p-4 shadow-lg">
+        <div class="info-group row">
+            <div class="col-4">
+                <img class="w-75 rounded-3 shadow-lg" src="/static/images/finance-non-finance-professionals.jpg" alt="Finance Image">
+            </div>
+            <div class="info-container col-8 d-flex align-items-center">
+                <p class="info">This is your Personal Finance Manager. It allows you to enter your Income and Expenses which then get stored for later use! You
+                    will be able to generate: Weekly, Monthly and Yearly summaries within the next update! Tom's Personal Finance Manager is completely
+                    free and easy to use for anyone who wishes to get back on track with or improve their finances. If you see anything wrong or find a bug, then feel free to contact
+                    me over Discord at <span class="text-decoration-underline" id="discord_username" role="button" onclick="copyClipboard()">TPlatts#1368</span>.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

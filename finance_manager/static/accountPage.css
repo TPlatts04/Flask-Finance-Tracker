@@ -1,0 +1,84 @@
+body {
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+body .account-container #form-holder {
+  transform: translateX(60%);
+}
+body .account-container #form-holder .login-container {
+  background-color: mediumspringgreen;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.856);
+  max-width: 75%;
+  max-height: 550px;
+}
+body .account-container #form-holder .login-container .login-button {
+  background-color: skyblue;
+  transition: all 200ms;
+}
+body .account-container #form-holder .login-container .login-button:hover {
+  scale: 105%;
+  box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.856);
+}
+body .account-container #form-holder .arrow-container .arrow {
+  cursor: pointer;
+  transform: translateY(-400%);
+}
+body .account-container #create-holder {
+  transform: translateX(100%);
+}
+body .account-container #create-holder .create-container {
+  background-color: mediumspringgreen;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.856);
+  max-width: 75%;
+}
+body .account-container #create-holder .create-container .requirements-holder {
+  transform: scaleY(0%);
+  margin: 2% 0% 0% 20%;
+  font-size: 18px;
+}
+body .account-container #create-holder .create-container .requirements {
+  margin: 4% 0% 0% 25%;
+  max-width: 100px;
+  text-decoration: underline;
+  font-size: 18px;
+  cursor: pointer;
+}
+body .account-container #create-holder .create-container .requirements:hover + .requirements-holder {
+  display: block;
+  animation: revealRequirements 0.5s ease-in-out 0s 1 forwards;
+}
+body .account-container #create-holder .create-container .requirements:not(:hover) + .requirements-holder {
+  animation: reverseRequirements 0.5s ease-in-out 0s 1 forwards;
+}
+@keyframes revealRequirements {
+  0% {
+    transform: scaleY(0%);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
+}
+@keyframes reverseRequirements {
+  0% {
+    transform: scaleY(100%);
+  }
+  100% {
+    transform: scaleY(0%);
+  }
+}
+body .account-container #create-holder .create-container .create-button {
+  background-color: skyblue;
+  transition: all 200ms;
+}
+body .account-container #create-holder .create-container .create-button:hover {
+  scale: 105%;
+  box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.856);
+}
+body .account-container #create-holder .arrow-left {
+  rotate: 180deg;
+  cursor: pointer;
+}/*# sourceMappingURL=accountPage.css.map */

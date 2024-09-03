@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+$global-fonts: 'Exo 2', 'monospace', 'sans-serif';
+
+body {
+    background-color: rgb(167, 230, 255);
+    font-family: $global-fonts;
+}
